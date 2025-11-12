@@ -21,7 +21,7 @@ jobs:
       with:
         dotnet-version: 10.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./sandbox/ConsoleApp/ConsoleApp.csproj
     - name: Build
       run: dotnet build ./sandbox/ConsoleApp/ConsoleApp.csproj --no-restore
     - name: Test
