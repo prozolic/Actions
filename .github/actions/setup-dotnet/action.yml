@@ -1,0 +1,31 @@
+name: Setup .NET SDK.
+
+inputs:
+  dotnet-version:
+    description: 'build .NET SDK version'
+    required: false
+    default: |
+      8.0.x
+      9.0.x
+      10.0.x
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-dotnet@d4c94342e560b34958eacfc5d055d21461ed1c5d # v5.0.0
+      with:
+        dotnet-version: ${{ inputs.dotnet-version }}
+
+    - name: Display .NET version
+      shell: bash
+      run: |
+          echo "::group::Display .NET version"
+          run: dotnet --version
+          echo "::endgroup::"
+
+    - name: Display installed .NET SDK version
+      shell: bash
+      run: |
+          echo "::group::Display installed .NET SDK version"
+          dotnet --list-sdks
+          echo "::endgroup::"
