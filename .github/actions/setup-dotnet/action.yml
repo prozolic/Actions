@@ -20,7 +20,7 @@ runs:
       shell: bash
       run: |
         echo "::group::Display .NET version"
-          run: dotnet --version
+          dotnet --version
         echo "::endgroup::"
 
     - name: Display installed .NET SDK version
@@ -29,5 +29,6 @@ runs:
         echo "::group::Display installed .NET SDK version"
           dotnet --list-sdks
         echo "::endgroup::"
+
 
 
