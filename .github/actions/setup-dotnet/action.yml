@@ -19,14 +19,15 @@ runs:
     - name: Display .NET version
       shell: bash
       run: |
-          echo "::group::Display .NET version"
-            run: dotnet --version
-          echo "::endgroup::"
+        echo "::group::Display .NET version"
+          run: dotnet --version
+        echo "::endgroup::"
 
     - name: Display installed .NET SDK version
       shell: bash
       run: |
-          echo "::group::Display installed .NET SDK version"
-            dotnet --list-sdks
-          echo "::endgroup::"
+        echo "::group::Display installed .NET SDK version"
+          dotnet --list-sdks
+        echo "::endgroup::"
+
 
