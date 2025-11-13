@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@71cf2267d89c5cb81562390fa70a37fa40b1305e # v6.pre.beta
     - name: Setup .NET
-      uses: actions/setup-dotnet@d4c94342e560b34958eacfc5d055d21461ed1c5d # v5.0.0
+      uses: prozolic/Actions/.github/actions/setup-dotnet@main
       with:
         dotnet-version: 10.0.x
     - name: Restore dependencies
