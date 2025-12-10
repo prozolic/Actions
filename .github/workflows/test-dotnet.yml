@@ -20,6 +20,8 @@ jobs:
       uses: prozolic/Actions/.github/actions/setup-dotnet@main
       with:
         dotnet-version: 10.0.x
+    - name: dotnet env check
+      run: dotnet run ./DotnetCommands.cs
     - name: Restore dependencies
       run: dotnet restore ./sandbox/ConsoleApp/ConsoleApp.csproj
     - name: Build
