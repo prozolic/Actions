@@ -3,7 +3,9 @@
 version: 2
 updates:
   - package-ecosystem: "github-actions" 
-    directory: "/" # Location of package manifests
+    directories: # Location of package manifests
+      - "/" # .github/workflows and root action.yml
+      - "/.github/actions/*" # composite actions
     schedule:
       interval: "weekly"
     ignore: # exclude patch releases
